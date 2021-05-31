@@ -1,0 +1,15 @@
+{
+  "name": "docker-challenge",
+  "version": "1.0.0",
+  "description": "The 2021 Docker challenge project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Docker",
+    "Pizza"
+  ],
+  "author": "Jonas Brems",
+  "license": "ISC"
+}
