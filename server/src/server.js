@@ -1,15 +1,15 @@
 const express = require('express');
+const db = require('./db/db');
+const { getPizzaRoutes } = require('./pizza/pizza.routes');
 
+
+db.connect();
+
+console.log('🏭 Assembling Express app ...');
 const app = express();
 
-app.get('/pizzas', (req, res) => {
-  res.json([
-    { name: 'Margherita', toppings: ['cheese'] },
-    { name: 'Bolognese', toppings: ['cheese', 'meatballs'] },
-    { name: 'Hawaii', toppings: ['cheese', 'Bacon', 'Pineapple'] },
-  ]);
-});
+app.use(getPizzaRoutes());
 
 app.listen(3000, () => {
-  console.log('Server listening on port 3000...');
+  console.log('👂 Server listening on port 3000 ...');
 });
