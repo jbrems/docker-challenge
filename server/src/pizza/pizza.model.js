@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const PizzaSchema = new mongoose.Schema({
   name: { type: String, required: true, set: setSlug },
   slug: { type: String, unique: true },
+  imageUrl: String,
+  description: String,
   toppings: [String],
 });
 

@@ -1,0 +1,56 @@
+article {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 10px 0;
+
+  border: solid 1px #888;
+  border-radius: 5px;
+
+  position: relative;
+
+  figure {
+    margin: 0;
+    
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;;
+    }
+  }
+
+  header {
+    padding: 5px;
+    font-size: larger;
+  }
+
+  .slug {
+    margin-left: 5px;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 5px;
+
+    a,
+    button {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px;
+      margin: 5px;
+      border: solid 1px #888;
+      border-radius: 3px;
+      background-color: #f8f8f8;
+      color: #333;
+      font-size: small;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 0 5px;
+    }
+  }
+}

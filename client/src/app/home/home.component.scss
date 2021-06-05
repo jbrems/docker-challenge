@@ -1,0 +1,18 @@
+.content {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 350px;
+    transform: scaleX(-1);
+  }
+
+  p {
+    margin: 25px 0 25px 50px;
+    font-size: larger;
+
+    &:last-of-type {
+      font-size: x-large;
+    }
+  }
+}

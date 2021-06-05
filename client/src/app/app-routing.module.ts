@@ -8,7 +8,7 @@ import { PizzaListComponent } from './pizza/pizza-list/pizza-list.component';
 const routes: Routes = [
   { path: 'pizzas', children: [
     { path: '', component: PizzaListComponent },
-    { path: ':pizza', component: PizzaDetailComponent },
+    { path: ':pizzaName', component: PizzaDetailComponent },
   ] },
   { path: 'admin', component: AdminComponent },
   { path: '**', component: HomeComponent },

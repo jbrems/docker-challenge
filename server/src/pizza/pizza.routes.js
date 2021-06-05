@@ -4,11 +4,11 @@ const { getAllPizzas, findPizzaByName, addPizza, removePizzaByName } = require('
 function getPizzaRoutes () {
   const router = express.Router();
 
-  router.get('/pizzas', getAllPizzas);
-  router.post('/pizzas', express.json(), addPizza);
+  router.get('/', getAllPizzas);
+  router.post('/', express.json(), addPizza);
 
-  router.get('/pizzas/:pizzaName', findPizzaByName);
-  router.delete('/pizzas/:pizzaName', removePizzaByName);
+  router.get('/:pizzaName', findPizzaByName);
+  router.delete('/:pizzaName', removePizzaByName);
 
   return router;
 }

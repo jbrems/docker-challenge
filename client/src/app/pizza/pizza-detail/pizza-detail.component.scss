@@ -1,0 +1,24 @@
+.details {
+  display: flex;
+
+  img {
+    height: 200px;
+  }
+
+  .content {
+    align-self: center;
+    margin-left: 50px;
+
+    p {
+      margin: 25px 0;
+    }
+
+    ul {
+      margin-top: -15px;
+
+      li {
+        margin-left: 25px;
+      }
+    }
+  }
+}
