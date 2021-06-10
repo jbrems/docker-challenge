@@ -1,1 +1,26 @@
 <p>admin works!</p>
+
+<section [formGroup]="pizzasForm">
+  <section formGroupName="pizzas"></section>
+  <article *ngFor="let pizzaForm of pizzaForms; index as i" [formGroup]="pizzaForm">
+    <figure>
+      <img [src]="pizzaForm.get('imageUrl')?.value || 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Eucalyp-Deus_Pizza.png'" alt="Pizza">
+    </figure>
+    <section class="form">
+      <section class="row">
+        <label [for]="'name_' + i">Pizza</label>
+        <input type="text" formControlName="name" [id]="'name_' + i">
+      </section>
+      <label for="'description_' + i" style="grid-area: span 1 / span 2;">Description</label>
+      <textarea formControlName="description" rows="4"  style="grid-area: span 1 / span 2;">{{pizzaForm.get('description')?.value}}</textarea>
+      <section class="row">
+        <label [for]="'toppings_' + i">Toppings</label>
+        <input type="text" formControlName="toppings" [id]="'toppings_' + i">
+      </section>
+      <section class="row">
+        <label [for]="'imageUrl_' + i">Image URL</label>
+        <input type="text" formControlName="imageUrl" [id]="'imageUrl_' + i">
+      </section>
+    </section>
+  </article>
+</section>

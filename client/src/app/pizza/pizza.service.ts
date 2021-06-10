@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Pizza } from './pizza';
 import { Observable } from 'rxjs';
-import { PizzaDetailComponent } from './pizza-detail/pizza-detail.component';
-
 
 @Injectable({
   providedIn: 'root'

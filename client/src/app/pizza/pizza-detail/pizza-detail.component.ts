@@ -16,7 +16,6 @@ export class PizzaDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      console.log(params);
       const pizzaName = params.get('pizzaName');
       if (pizzaName) {
         this.pizza$ = this.pizzaService.getPizza(pizzaName);
