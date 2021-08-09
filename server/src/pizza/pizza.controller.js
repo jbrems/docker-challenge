@@ -37,6 +37,27 @@ async function addPizza (req, res, next) {
   }
 }
 
+async function updatePizzaByName (req, res, next) {
+  try {
+    const { pizzaName } = req.params;
+    const { name, description, toppings } = req.body;
+    console.log(`🍕 Updating pizza with name '${pizzaName}' with '${name} - ${description} - ${toppings}' ...`);
+    let pizza = await Pizza.findOne({ slug: pizzaName });
+    
+    if (!pizza) return res.sendStatus(404);
+
+    pizza.name = name;
+    pizza.description = description;
+    pizza.toppings = toppings;
+    pizza = await pizza.save();
+
+    res.json(pizza);
+  } catch (error) {
+    console.error(error);
+    next(error);
+  }
+}
+
 async function removePizzaByName (req, res, next) {
   try {
     const { pizzaName } = req.params;
@@ -58,5 +79,6 @@ module.exports = {
   getAllPizzas,
   findPizzaByName,
   addPizza,
+  updatePizzaByName,
   removePizzaByName,
 };

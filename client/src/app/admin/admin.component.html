@@ -1,10 +1,10 @@
-<p>admin works!</p>
+<h2>Admin</h2>
 
 <section [formGroup]="pizzasForm">
   <section formGroupName="pizzas"></section>
   <article *ngFor="let pizzaForm of pizzaForms; index as i" [formGroup]="pizzaForm">
     <figure>
-      <img [src]="pizzaForm.get('imageUrl')?.value || 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Eucalyp-Deus_Pizza.png'" alt="Pizza">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Eucalyp-Deus_Pizza.png" alt="Pizza">
     </figure>
     <section class="form">
       <section class="row">
@@ -17,10 +17,12 @@
         <label [for]="'toppings_' + i">Toppings</label>
         <input type="text" formControlName="toppings" [id]="'toppings_' + i">
       </section>
-      <section class="row">
-        <label [for]="'imageUrl_' + i">Image URL</label>
-        <input type="text" formControlName="imageUrl" [id]="'imageUrl_' + i">
+      <section class="row right">
+        <button class="success" (click)="save(pizzaForm)">Save</button>
+        <button (click)="delete(pizzaForm)">Delete</button>
       </section>
     </section>
   </article>
 </section>
+
+<div class="overlay" *ngIf="showOverlay"></div>

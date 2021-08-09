@@ -1,5 +1,5 @@
 const express = require('express');
-const { getAllPizzas, findPizzaByName, addPizza, removePizzaByName } = require('./pizza.controller');
+const { getAllPizzas, findPizzaByName, addPizza, updatePizzaByName, removePizzaByName } = require('./pizza.controller');
 
 function getPizzaRoutes () {
   const router = express.Router();
@@ -8,6 +8,7 @@ function getPizzaRoutes () {
   router.post('/', express.json(), addPizza);
 
   router.get('/:pizzaName', findPizzaByName);
+  router.put('/:pizzaName', express.json(), updatePizzaByName);
   router.delete('/:pizzaName', removePizzaByName);
 
   return router;
