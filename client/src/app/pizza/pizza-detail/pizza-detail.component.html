@@ -1,5 +1,8 @@
 <article *ngIf="pizza$ | async; let pizza">
   <h2>Pizza {{pizza.name}} <p class="slug">{{pizza.slug}}</p></h2>
+  <section class="row right slide-up">
+    <button class="blue" routerLink="/pizzas">&lt; Back to pizzas</button>
+  </section>
   <section class="details">
     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Eucalyp-Deus_Pizza.png" [attr.alt]="'Pizza ' + pizza.name">
     <section class="content">

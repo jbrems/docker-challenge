@@ -62,4 +62,13 @@ export class AdminComponent implements OnInit {
       this.showOverlay = false;
     });
   }
+
+  add () {
+    this.pizzas.insert(0, this.fb.group({
+      name: [''],
+      slug: [''],
+      description: [],
+      toppings: [''],
+    }));
+  }
 }

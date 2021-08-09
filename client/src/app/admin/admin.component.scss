@@ -33,36 +33,12 @@ article {
     }
 
     .row {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
-
-      &.right {
-        justify-content: flex-end;
-      }
-
       label {
         min-width: 90px;
       }
 
       input {
         margin-left: 15px;
-      }
-
-      button {
-        padding: 10px;
-        margin-left: 10px;
-        min-width: 100px;
-        color: white;
-        background: #E52521;
-        border: solid 1px #E52521;
-        border-radius: 25px;
-        cursor: pointer;
-
-        &.success {
-          background: #43B047;
-          border-color: #43B047;
-        }
       }
     }
   }
@@ -71,7 +47,7 @@ article {
 div.overlay {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(80, 80, 80, 0.5);

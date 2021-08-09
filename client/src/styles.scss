@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Comfortaa";
+  font-family: "Comfortaa";  
 }
 
 h2 {
@@ -24,4 +24,48 @@ h2 {
   margin-left: 10px;
   font-size: x-small;
   color: white;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &.right {
+    justify-content: flex-end;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.slide-up {
+    margin-top: -60px;
+  }
+
+  button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    min-width: 100px;
+    color: white;
+    background: #E52521;
+    border: solid 1px #E52521;
+    border-radius: 25px;
+    cursor: pointer;
+
+    &.green {
+      background: #43B047;
+      border-color: #43B047;
+    }
+
+    &.blue {
+      background: #049CD8;
+      border-color: #049CD8;
+    }
+
+    &.yellow {
+      background: #FBD000;
+      border-color: #FBD000;
+    }
+  }
 }

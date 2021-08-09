@@ -1,5 +1,9 @@
 <h2>Admin</h2>
 
+<section class="row right slide-up">
+  <button class="green" (click)="add()">Add Pizza</button>
+</section>
+
 <section [formGroup]="pizzasForm">
   <section formGroupName="pizzas"></section>
   <article *ngFor="let pizzaForm of pizzaForms; index as i" [formGroup]="pizzaForm">
@@ -18,7 +22,7 @@
         <input type="text" formControlName="toppings" [id]="'toppings_' + i">
       </section>
       <section class="row right">
-        <button class="success" (click)="save(pizzaForm)">Save</button>
+        <button *ngIf="pizzaForm.touched" class="blue" (click)="save(pizzaForm)">Save</button>
         <button (click)="delete(pizzaForm)">Delete</button>
       </section>
     </section>

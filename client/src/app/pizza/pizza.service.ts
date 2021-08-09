@@ -19,7 +19,10 @@ export class PizzaService {
   }
 
   public savePizza (pizza: Pizza): Observable<Pizza> {
-    return this.http.put<Pizza>(`/api/pizzas/${pizza.slug}`, pizza);
+    if (pizza.slug) {
+      return this.http.put<Pizza>(`/api/pizzas/${pizza.slug}`, pizza);
+    }
+    return this.http.post<Pizza>('/api/pizzas', pizza);
   }
 
   public deletePizza (slug: String): Observable<Pizza> {
