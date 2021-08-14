@@ -5,8 +5,7 @@ Hello adventurer, and welcome to the 2021 Docker Challenge.
 If you have some basic understanding of Angular or a similar Single Page Application framework and want to try your hand at setting up Docker containers for some Nodejs, MongoDB and file servers, this challenge might be just right for you.
 
 Be warned, though, that this challenge will not teach you anything about Docker containers, Nodejs, MongoDB or file servers, it only provides a challenge to be undertaken by you and your jolly developer friends.  
-Of course you can, and probably will, learn a thing or two by looking at the submissions of those brave enough to accept this challenge.  
-But the main opportunity for learning consists of you browsing the internet and trying out different things while looking for the best way to complete this challenge!
+Of course you can, and probably will, learn a thing or two by looking at the submissions of those brave enough to accept this challenge. The main opportunity for learning consists of you browsing the internet and trying out different things while looking for the best way to complete this challenge!
 
 If this sounds like a challenge for you, continue reading below.
 
@@ -15,9 +14,9 @@ This repository provides a simple `express` server connecting to a local `MongoD
 
 The main challenge consists of providing a production grade Docker solution to serve the database, backend API and front-end project each on their own server.
 
-Besides the main challenge there a couple of side quests you can try to complete to deepen your learnings and broaden your knowledge. 
+Besides the main challenge there are a couple of side quests you can try to complete to deepen your learnings and broaden your knowledge. 
 
-Note: The code in this project is not 100% ready to be plugged into a Docker solution. You are free to, and probably will have to, change any line of code to fit your needs.
+Note: The code in this project is not 100% ready to be plugged into a Docker solution. You are free to, and probably will have to, change, add or delete any line of code to fit your needs.
 
 Merge Requests for bugfixes, code improvements, additional features or even additional goals are very much appreciated.
 
@@ -34,8 +33,8 @@ You are free to solve the challenge however you desire, but keep in mind the goa
 **Main goals**
 * Setup a `MongoDB` container with persisting data between restarts
 * Setup a `Nodejs` container to serve the express API
-* Setup a `file server` (with Apache or otherwise) container to serve the client code _(serving the client from your express server is allowed but maybe not in the spirit of this challenge)_
-* Setup a `reverse proxy` container to forward traffic to `localhost/api` to the `express` API and the client traffic to the `file server`'s `index.html` page _(opting for Angular's hash routing is allowed but maybe not in the spirit of this challenge)_
+* Setup a `file server` container (with Apache or otherwise) to serve the client code _(serving the client from your express server is allowed but maybe not in the spirit of this challenge)_
+* Setup a `reverse proxy` container to forward traffic to `localhost/api` to the `express` API _(the API endpoints are meant to be served on the root of the express server and not behind the `/api` path)_ and the client traffic to the `file server`'s `index.html` page _(opting for Angular's hash routing is allowed but maybe not in the spirit of this challenge)_
 
 **Additional goals**
 * Serve the API and client over HTTPS (with `Let's encrypt`, `Caddy server` or otherwise)
@@ -46,7 +45,7 @@ You are free to solve the challenge however you desire, but keep in mind the goa
 * Setup dynamic subdomains for each of the pizzas (e.g. `margherita.localhost` for `localhost/pizzas/margherita`)
 
 ## Getting started
-1. Fork this project to your personal GitHub or GitLab (TODO EVEN POSSIBLE?) account.
+1. Fork this project to your personal GitHub account
 1. Launch a local instance of MongoDB _(if needed, change the `mongodbConnectionString` in `server/src/db/db.js`)_
 1. Install the server NPM dependencies by running `npm install` from the server directory
 1. Install the client NPM dependencies by running `npm install` from the client directory
@@ -55,7 +54,8 @@ You are free to solve the challenge however you desire, but keep in mind the goa
 
 With the API and client servers up and running you are free to surf to http://localhost:4200 and explore the "Mama Mia Pizzeria" website.
 
-This is where the challenge begins, the "Mama Mia Pizzeria" website is currently being server by your local nodejs express server connecting to your local MongoDB server and another Angular dev server serving the client files. Now it is your job to turn this setup into a Docker solution with containers, local networks and anything else you need or desire.
+This is where the challenge begins, the "Mama Mia Pizzeria" website is currently being server by your local `Nodejs` `express` server connecting to your local `MongoDB` instance and another `Angular` dev server serving the client files.  
+Now it is your job to turn this setup into a Docker solution with containers, local networks and anything else you need or desire.
 
 Good luck!
 
@@ -63,10 +63,10 @@ Good luck!
 If you made it this far, I am sure you have what it takes to accept and complete (at least part of) this challenge.
 
 To accept the challenge you simply have to
-1. Go to the nearest window, open it, lean out and shout from the top of your lungs "I, <your name>, accept the 2021 Docker challenge!"
+1. Go to the nearest window, open it, lean out and shout from the top of your lungs "I, &lt;your name&gt;, accept the 2021 Docker challenge!"
 1. Fork this project, add your name to the challengees list, and initiate a Merge Request
 
 **Challengees**
 * Jonas
 
-_The deadline for submitting your solution is technically December 31st 2021, but you are free to complete this challenge at your own pace and when you see fit._
+_The deadline for submitting your solution is technically December 31st 2021, but you are free to complete this challenge at your own pace and whenever you see fit._
