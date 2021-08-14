@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { PizzaModule } from './pizza/pizza.module';
+import { ScoreModule } from './score/score.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PizzaModule } from './pizza/pizza.module';
     PizzaModule,
     HomeModule,
     AdminModule,
+    ScoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

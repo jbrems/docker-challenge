@@ -2,7 +2,7 @@
 
 <article *ngFor="let pizza of pizzas$ | async">
   <figure>
-    <img [src]="pizza.imageUrl || 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Eucalyp-Deus_Pizza.png'" [attr.alt]="'Pizza ' + pizza.name">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Eucalyp-Deus_Pizza.png" [attr.alt]="'Pizza ' + pizza.name">
   </figure>
   <header>Pizza {{pizza.name}}</header>
   <p class="slug">{{pizza.slug}}</p>

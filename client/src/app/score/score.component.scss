@@ -1,0 +1,32 @@
+svg {
+  fill: #FBD000;
+
+  &.incomplete {
+    fill: #FBD00044; 
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: space-evenly;
+
+  svg {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.details {
+  margin-top: 100px;
+
+  .detail {
+    display: flex;
+    align-items: center;
+
+    margin-top: 25px;
+
+    svg {
+      margin: -8px 0 0 15px;
+    }
+  }
+}
